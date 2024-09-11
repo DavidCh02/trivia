@@ -8,7 +8,7 @@ def create_superuser(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('trivia_game', '0003_create_superuser'),  # Asegúrate de que esto apunte a tu última migración
+         ('trivia_game', '0002_rename_playerscore_player_and_more'),  
     ]
 
     operations = [

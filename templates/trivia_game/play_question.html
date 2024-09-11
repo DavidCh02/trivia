@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Trivia - Pregunta</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        :root {
+            --primary-color: #6C63FF;
+            --secondary-color: #4CAF50;
+            --background-color: #F0F4F8;
+            --text-color: #333;
+            --error-color: #FF6B6B;
+            --success-color: #4CAF50;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .question-box {
+            background-color: #f9f9f9;
+            border: 2px solid var(--primary-color);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .question-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .question-text {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        form {
+            margin-bottom: 1.5rem;
+        }
+
+        button {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem 1rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        button:hover {
+            background-color: #a23eee;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+        }
+
+        .player-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .result-message {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            padding: 10px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .next-question {
+            margin-top: 1rem;
+            display: none;
+        }
+
+        .next-question button {
+            background-color: var(--primary-color);
+        }
+
+        .next-question button:hover {
+            background-color: #5753d9;
+        }
+
+        .correct {
+            background-color: var(--success-color);
+            color: white;
+        }
+
+        .incorrect {
+            background-color: var(--error-color);
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Juego de Trivia</h1>
+        <div class="question-box">
+            <p class="question-text">{{ question.text }}</p>
+            <form id="answer-form" method="post">
+                {% csrf_token %}
+                <div id="form-fields">
+                    {{ form.as_p }}
+                </div>
+                <input type="hidden" name="time_expired" id="time-expired" value="false">
+                <button id="submit-answer" type="submit">Enviar respuesta</button>
+            </form>
+
+            <div class="timer">
+                <p>Tiempo restante: <span id="time-left">{{ time_left }}</span> segundos</p>
+            </div>
+        </div>
+        <div id="result-message" class="result-message" style="display: none;"></div>
+        <p class="player-info">Jugador: {{ player.name }}</p>
+        <p class="player-info">Puntuación: {{ player.score }}</p>
+        {% if result_message %}
+        <p id="server-result-message" class="result-message {{ result_class }}">{{ result_message }}</p>
+        {% endif %}
+        <div id="next-question" class="next-question" style="display: {% if show_next_button %}block{% else %}none{% endif %};">
+            <form method="get">
+                <button type="submit">Siguiente Pregunta</button>
+            </form>
+        </div>
+        <div class="finish-game" style="margin-top: 1rem;">
+            <form action="{% url 'leaderboard' %}" method="get">
+                <button type="submit">Terminar Juego</button>
+            </form>
+        </div>
+    </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    let timeLeft = {{ time_left }};
+    const timeLeftDisplay = document.getElementById('time-left');
+    const form = document.getElementById('answer-form');
+    const formFields = document.getElementById('form-fields');
+    const resultMessage = document.getElementById('result-message');
+    const serverResultMessage = document.getElementById('server-result-message');
+    const submitButton = document.getElementById('submit-answer');
+    const timeExpiredInput = document.getElementById('time-expired');
+    const nextQuestionDiv = document.getElementById('next-question');
+    let countdown;
+
+    function startTimer() {
+        countdown = setInterval(function() {
+            timeLeft--;
+            timeLeftDisplay.textContent = timeLeft;
+
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                handleTimeExpired();
+            }
+        }, 1000);
+    }
+
+    function handleTimeExpired() {
+        timeExpiredInput.value = 'true';
+        resultMessage.textContent = "¡Se acabó el tiempo! Has perdido 1 punto.";
+        resultMessage.classList.add('incorrect');
+        resultMessage.style.display = "block";
+        submitButton.style.display = "none";
+        formFields.style.display = "none";
+        nextQuestionDiv.style.display = "block";
+        form.submit();
+    }
+
+    // Iniciar el temporizador solo si el tiempo no ha expirado y no hay mensaje de resultado del servidor
+    if (timeLeft > 0 && !serverResultMessage) {
+        startTimer();
+    } else {
+        // Si ya hay un mensaje de resultado o el tiempo se ha acabado, ocultar el botón de envío y los campos del formulario
+        submitButton.style.display = "none";
+        formFields.style.display = "none";
+    }
+
+    // Detener el temporizador si se envía el formulario
+    form.addEventListener('submit', function(event) {
+        clearInterval(countdown);
+        submitButton.style.display = "none";
+    });
+});
+</script>
+</body>
+</html>

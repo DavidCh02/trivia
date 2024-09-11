@@ -1,0 +1,242 @@
+[
+    {
+        "model": "trivia_game.question",
+        "pk": 1,
+        "fields": {
+            "text": "¿Cuál es el planeta más cercano al Sol?",
+            "correct_answer": "Mercurio",
+            "option_1": "Venus",
+            "option_2": "Tierra",
+            "option_3": "Marte",
+            "option_4": "Júpiter"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 2,
+        "fields": {
+            "text": "¿Qué elemento tiene como símbolo químico 'O'?",
+            "correct_answer": "Oxígeno",
+            "option_1": "Nitrógeno",
+            "option_2": "Hidrógeno",
+            "option_3": "Carbono",
+            "option_4": "Helio"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 3,
+        "fields": {
+            "text": "¿En qué continente se encuentra Egipto?",
+            "correct_answer": "África",
+            "option_1": "Asia",
+            "option_2": "Europa",
+            "option_3": "Oceanía",
+            "option_4": "América"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 4,
+        "fields": {
+            "text": "¿Quién escribió 'Don Quijote de la Mancha'?",
+            "correct_answer": "Miguel de Cervantes",
+            "option_1": "Gabriel García Márquez",
+            "option_2": "Jorge Luis Borges",
+            "option_3": "Mario Vargas Llosa",
+            "option_4": "Pablo Neruda"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 5,
+        "fields": {
+            "text": "¿Cuál es el océano más grande del mundo?",
+            "correct_answer": "Océano Pacífico",
+            "option_1": "Océano Atlántico",
+            "option_2": "Océano Índico",
+            "option_3": "Océano Ártico",
+            "option_4": "Océano Antártico"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 6,
+        "fields": {
+            "text": "¿En qué año comenzó la Segunda Guerra Mundial?",
+            "correct_answer": "1939",
+            "option_1": "1914",
+            "option_2": "1941",
+            "option_3": "1936",
+            "option_4": "1945"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 7,
+        "fields": {
+            "text": "¿Qué planeta es conocido como el 'Planeta Rojo'?",
+            "correct_answer": "Marte",
+            "option_1": "Júpiter",
+            "option_2": "Saturno",
+            "option_3": "Venus",
+            "option_4": "Neptuno"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 8,
+        "fields": {
+            "text": "¿Qué país tiene más habitantes?",
+            "correct_answer": "China",
+            "option_1": "India",
+            "option_2": "Estados Unidos",
+            "option_3": "Indonesia",
+            "option_4": "Rusia"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 9,
+        "fields": {
+            "text": "¿Qué tipo de animal es la ballena?",
+            "correct_answer": "Mamífero",
+            "option_1": "Pez",
+            "option_2": "Ave",
+            "option_3": "Reptil",
+            "option_4": "Anfibio"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 10,
+        "fields": {
+            "text": "¿Cuál es el metal más abundante en la corteza terrestre?",
+            "correct_answer": "Aluminio",
+            "option_1": "Hierro",
+            "option_2": "Cobre",
+            "option_3": "Plata",
+            "option_4": "Oro"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 11,
+        "fields": {
+            "text": "¿Qué país ganó la Copa Mundial de Fútbol en 2018?",
+            "correct_answer": "Francia",
+            "option_1": "Brasil",
+            "option_2": "Argentina",
+            "option_3": "Alemania",
+            "option_4": "Italia"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 12,
+        "fields": {
+            "text": "¿Quién fue el primer hombre en pisar la luna?",
+            "correct_answer": "Neil Armstrong",
+            "option_1": "Yuri Gagarin",
+            "option_2": "Buzz Aldrin",
+            "option_3": "John Glenn",
+            "option_4": "Michael Collins"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 13,
+        "fields": {
+            "text": "¿Cuál es el río más largo del mundo?",
+            "correct_answer": "Amazonas",
+            "option_1": "Nilo",
+            "option_2": "Yangtsé",
+            "option_3": "Misisipi",
+            "option_4": "Danubio"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 14,
+        "fields": {
+            "text": "¿Cuál es el idioma más hablado en el mundo?",
+            "correct_answer": "Inglés",
+            "option_1": "Español",
+            "option_2": "Mandarín",
+            "option_3": "Hindú",
+            "option_4": "Árabe"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 15,
+        "fields": {
+            "text": "¿Cuál es el país más grande del mundo en superficie?",
+            "correct_answer": "Rusia",
+            "option_1": "Canadá",
+            "option_2": "China",
+            "option_3": "Estados Unidos",
+            "option_4": "Brasil"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 16,
+        "fields": {
+            "text": "¿En qué continente se encuentra el desierto del Sahara?",
+            "correct_answer": "África",
+            "option_1": "Asia",
+            "option_2": "América",
+            "option_3": "Europa",
+            "option_4": "Oceanía"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 17,
+        "fields": {
+            "text": "¿Qué famoso científico propuso la teoría de la relatividad?",
+            "correct_answer": "Albert Einstein",
+            "option_1": "Isaac Newton",
+            "option_2": "Galileo Galilei",
+            "option_3": "Marie Curie",
+            "option_4": "Nikola Tesla"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 18,
+        "fields": {
+            "text": "¿Qué país es famoso por la Torre Eiffel?",
+            "correct_answer": "Francia",
+            "option_1": "Italia",
+            "option_2": "España",
+            "option_3": "Reino Unido",
+            "option_4": "Alemania"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 19,
+        "fields": {
+            "text": "¿En qué país se originaron los Juegos Olímpicos?",
+            "correct_answer": "Grecia",
+            "option_1": "Italia",
+            "option_2": "China",
+            "option_3": "Estados Unidos",
+            "option_4": "Japón"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 20,
+        "fields": {
+            "text": "¿Cuál es el órgano más grande del cuerpo humano?",
+            "correct_answer": "La piel",
+            "option_1": "El corazón",
+            "option_2": "El hígado",
+            "option_3": "El cerebro",
+            "option_4": "Los pulmones"
+        }
+    }
+]

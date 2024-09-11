@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-(254&)xh@6-figv=!^mp^ibiwy2k99q4sg@v4a6ppxo#sg7&+%'
+SECRET_KEY = 'a6e80d44260d9ae09adecedfb2f58dd6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'Trivia.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'postgresql://postgres_usuario_contrase_c3_user:6qdfBvvdcjkySHGnWjbcZBgnuosI5FQo@dpg-crggi7dsvqrc73f1ucd0-a.oregon-postgres.render.com/postgres_usuario_contrase_c3',
         'NAME': 'postgres://usuario:contrase%C3%B1a@servidor:puerto/nombre_basedatos',
         'USER': 'postgres_usuario_contrase_c3_user',
         'PASSWORD': '6qdfBvvdcjkySHGnWjbcZBgnuosI5FQo',

@@ -1,6 +1,7 @@
 # trivia_game/urls.py
 from django.urls import path
 from . import views
+from .views import load_data_view 
 
 urlpatterns = [
     path('', views.home, name='home'),

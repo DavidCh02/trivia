@@ -1,0 +1,302 @@
+[
+    {
+        "model": "trivia_game.question",
+        "pk": 21,
+        "fields": {
+            "text": "¿Cuál es la montaña más alta del mundo?",
+            "correct_answer": "El Everest",
+            "option_1": "K2",
+            "option_2": "Kangchenjunga",
+            "option_3": "Makalu",
+            "option_4": "Lhotse"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 22,
+        "fields": {
+            "text": "¿Qué instrumento se utiliza para medir la temperatura?",
+            "correct_answer": "Termómetro",
+            "option_1": "Barómetro",
+            "option_2": "Higrómetro",
+            "option_3": "Anemómetro",
+            "option_4": "Altímetro"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 23,
+        "fields": {
+            "text": "¿Qué gas constituye la mayor parte de la atmósfera terrestre?",
+            "correct_answer": "Nitrógeno",
+            "option_1": "Oxígeno",
+            "option_2": "Dióxido de carbono",
+            "option_3": "Helio",
+            "option_4": "Argón"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 24,
+        "fields": {
+            "text": "Si hay cinco manzanas y quitas tres, ¿cuántas quedan?",
+            "correct_answer": "Dos",
+            "option_1": "Tres",
+            "option_2": "Cinco",
+            "option_3": "Ninguna",
+            "option_4": "Cuatro"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 25,
+        "fields": {
+            "text": "Si un tren sale de la estación a las 3:00 p.m. y viaja a 60 km/h, ¿a qué hora llegará a su destino si está a 180 km?",
+            "correct_answer": "A las 5:00 p.m.",
+            "option_1": "A las 4:30 p.m.",
+            "option_2": "A las 6:00 p.m.",
+            "option_3": "A las 7:00 p.m.",
+            "option_4": "A las 5:30 p.m."
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 26,
+        "fields": {
+            "text": "Si un círculo tiene un radio de 5 cm, ¿cuál es su diámetro?",
+            "correct_answer": "10 cm",
+            "option_1": "5 cm",
+            "option_2": "15 cm",
+            "option_3": "25 cm",
+            "option_4": "20 cm"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 27,
+        "fields": {
+            "text": "Si un coche recorre 100 km en 2 horas, ¿cuál es su velocidad promedio?",
+            "correct_answer": "50 km/h",
+            "option_1": "25 km/h",
+            "option_2": "100 km/h",
+            "option_3": "75 km/h",
+            "option_4": "60 km/h"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 28,
+        "fields": {
+            "text": "Si tienes 10 dolares y compras un artículo de 7 dolares, ¿cuánto te queda?",
+            "correct_answer": "3 dolares",
+            "option_1": "5 dolares",
+            "option_2": "2 dolares",
+            "option_3": "1 dolar",
+            "option_4": "4 dolares"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 29,
+        "fields": {
+            "text": "Si un triángulo tiene dos lados de 5 cm y 7 cm, ¿cuál puede ser la longitud del tercer lado?",
+            "correct_answer": "Menos de 12 cm y más de 2 cm",
+            "option_1": "Solo 6 cm",
+            "option_2": "Menos de 10 cm",
+            "option_3": "Exactamente 5 cm",
+            "option_4": "Solo 11 cm"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 30,
+        "fields": {
+            "text": "Si un número es divisible por 2 y por 3, ¿también es divisible por 6?",
+            "correct_answer": "Sí",
+            "option_1": "No",
+            "option_2": "Solo por 2",
+            "option_3": "Solo por 3",
+            "option_4": "Depende del número"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 31,
+        "fields": {
+            "text": "¿Qué instrumento musical tiene teclas blancas y negras?",
+            "correct_answer": "Piano",
+            "option_1": "Guitarra",
+            "option_2": "Bajo",
+            "option_3": "Trompeta",
+            "option_4": "Violin"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 32,
+        "fields": {
+            "text": "¿Cuál es el símbolo químico del oro?",
+            "correct_answer": "Au",
+            "option_1": "Ag",
+            "option_2": "Fe",
+            "option_3": "Pb",
+            "option_4": "Cu"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 33,
+        "fields": {
+            "text": "¿Qué famoso monumento se encuentra en Egipto?",
+            "correct_answer": "Pirámides de Giza",
+            "option_1": "Torre Eiffel",
+            "option_2": "Coliseo",
+            "option_3": "Machu Picchu",
+            "option_4": "Gran Muralla China"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 34,
+        "fields": {
+            "text": "¿Qué continente se considera el lugar de origen de la humanidad?",
+            "correct_answer": "África",
+            "option_1": "Asia",
+            "option_2": "Europa",
+            "option_3": "América",
+            "option_4": "Oceanía"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 35,
+        "fields": {
+            "text": "Si hay seis galletas y comes dos, ¿cuántas galletas quedan?",
+            "correct_answer": "Cuatro",
+            "option_1": "Seis",
+            "option_2": "Cinco",
+            "option_3": "Tres",
+            "option_4": "Dos"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 36,
+        "fields": {
+            "text": "Un gallo pone un huevo en la cima de una montaña, ¿hacia dónde rueda el huevo?",
+            "correct_answer": "No rueda, los gallos no ponen huevos.",
+            "option_1": "Hacia abajo",
+            "option_2": "Hacia arriba",
+            "option_3": "No rueda",
+            "option_4": "Hacia el lado"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 37,
+        "fields": {
+            "text": "Si un pez vive en el agua, ¿dónde vive un pez volador?",
+            "correct_answer": "En el aire, pero sigue siendo un pez.",
+            "option_1": "En el agua",
+            "option_2": "En el suelo",
+            "option_3": "En la tierra",
+            "option_4": "En el cielo"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 38,
+        "fields": {
+            "text": "¿Qué país es famoso por la Torre Eiffel?",
+            "correct_answer": "Francia",
+            "option_1": "Italia",
+            "option_2": "España",
+            "option_3": "Reino Unido",
+            "option_4": "Alemania"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 39,
+        "fields": {
+            "text": "Si un gato tiene tres vidas, ¿cuántas vidas tiene un gato y medio?",
+            "correct_answer": "4.5 vidas.",
+            "option_1": "5 vidas.",
+            "option_2": "3 vidas.",
+            "option_3": "6 vidas.",
+            "option_4": "4 vidas."
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 40,
+        "fields": {
+            "text": "¿Cuál es el planeta más grande del sistema solar?",
+            "correct_answer": "Júpiter",
+            "option_1": "Saturno",
+            "option_2": "Marte",
+            "option_3": "Tierra",
+            "option_4": "Neptuno"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 41,
+        "fields": {
+            "text": "¿Quién fue el primer presidente de Estados Unidos?",
+            "correct_answer": "George Washington",
+            "option_1": "Thomas Jefferson",
+            "option_2": "Abraham Lincoln",
+            "option_3": "John Adams",
+            "option_4": "Franklin D. Roosevelt"
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 42,
+        "fields": {
+            "text": "Si hoy es lunes, ¿qué día será en tres días?",
+            "correct_answer": "Jueves.",
+            "option_1": "Martes.",
+            "option_2": "Miércoles.",
+            "option_3": "Viernes.",
+            "option_4": "Sábado."
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 43,
+        "fields": {
+            "text": "¿Cuantos goles va CR7 en este año?",
+            "correct_answer": "900 o mas.",
+            "option_1": "800.",
+            "option_2": "500.",
+            "option_3": "606.",
+            "option_4": "10."
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 44,
+        "fields": {
+            "text": "¿Por que el desarrollador no tiene novia?",
+            "correct_answer": "Porque no lo quieren.",
+            "option_1": "Por timido.",
+            "option_2": "Por feo.",
+            "option_3": "Por inalcanzable.",
+            "option_4": "Porque no se baña."
+        }
+    },
+    {
+        "model": "trivia_game.question",
+        "pk": 45,
+        "fields": {
+            "text": "¿Cuál es el deporte más popular del mundo?",
+            "correct_answer": "Fútbol",
+            "option_1": "Baloncesto",
+            "option_2": "Tenis",
+            "option_3": "Críquet",
+            "option_4": "Rugby"
+        }
+    }
+]

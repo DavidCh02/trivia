@@ -174,11 +174,12 @@
         {% if result_message %}
         <p id="server-result-message" class="result-message {{ result_class }}">{{ result_message }}</p>
         {% endif %}
-        <div id="next-question" class="next-question" style="display: {% if show_next_button %}block{% else %}none{% endif %};">
+        <div id="next-question" class="next-question" style="display: none;">
             <form method="get">
                 <button type="submit">Siguiente Pregunta</button>
             </form>
         </div>
+
         <div class="finish-game" style="margin-top: 1rem;">
             <form action="{% url 'leaderboard' %}" method="get">
                 <button type="submit">Terminar Juego</button>

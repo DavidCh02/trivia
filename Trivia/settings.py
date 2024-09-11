@@ -81,7 +81,14 @@ WSGI_APPLICATION = 'Trivia.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(default='postgres://localhost/nombre_de_tu_base_de_datos')
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres://usuario:contrase%C3%B1a@servidor:puerto/nombre_basedatos',
+        'USER': 'postgres_usuario_contrase_c3_user',
+        'PASSWORD': '6qdfBvvdcjkySHGnWjbcZBgnuosI5FQo',
+        'HOST': 'dpg-crggi7dsvqrc73f1ucd0-a',  # Por ejemplo, 'localhost' o la URL de Render
+        'PORT': '5432',
+    }
 }
 
 

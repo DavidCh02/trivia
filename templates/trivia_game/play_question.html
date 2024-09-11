@@ -157,7 +157,7 @@
             <form id="answer-form" method="post">
             {% csrf_token %}
             <div class="form-group">
-                <label for="{{ form.selected_answer.id_for_label }}">Elige una opción, recuerda que tienes tiempo</label>
+                <label for="{{ form.selected_answer.id_for_label }}">Elige una opción</label>
                 {{ form.selected_answer }}
             </div>
             <input type="hidden" name="time_expired" id="time-expired" value="false">

@@ -155,12 +155,13 @@
         <div class="question-box">
             <p class="question-text">{{ question.text }}</p>
             <form id="answer-form" method="post">
-                {% csrf_token %}
-                <div id="form-fields">
-                    {{ form.as_p }}
-                </div>
-                <input type="hidden" name="time_expired" id="time-expired" value="false">
-                <button id="submit-answer" type="submit">Enviar respuesta</button>
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="{{ form.selected_answer.id_for_label }}">Elige una opción, recuerda que tienes tiempo</label>
+                {{ form.selected_answer }}
+            </div>
+            <input type="hidden" name="time_expired" id="time-expired" value="false">
+            <button id="submit-answer" type="submit">Enviar respuesta</button>
             </form>
 
             <div class="timer">

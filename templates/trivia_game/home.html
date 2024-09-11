@@ -159,26 +159,13 @@
 
         <h1>¡Bienvenido al juego de preguntas de cultura general!</h1>
         <a href="{% url 'play_game' %}" class="btn btn-play">¡Jugar Ahora!</a>
-        <a href="{% url 'add_question' %}" class="btn btn-add">Agregar Pregunta</a>
+        <a href="{% url '' %}" class="btn btn-add">Agregar Pregunta (Si lo piden :3)</a>
         <a href="{% url 'leaderboard' %}" class="btn btn-leaderboard">Tabla de Posiciones</a>
     </div>
-<button id="loadDataButton">Cargar Datos</button>
+
 
 <script>
-document.getElementById('loadDataButton').addEventListener('click', function() {
-    fetch('/load-data/', {
-        method: 'POST',
-        headers: {
-            'X-CSRFToken': '{{ csrf_token }}',  // Asegúrate de incluir el token CSRF
-            'Content-Type': 'application/json'
-        },
-    })
-    .then(response => response.json())
-    .then(data => {
-        alert(data.message);  // Muestra el mensaje de éxito o error
-    })
-    .catch(error => console.error('Error:', error));
-});
+
 </script>
 </body>
 </html>

@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-(254&)xh@6-figv=!^mp^ibiwy2k99q4sg@v4a6ppxo#sg7&+%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['trivia.onrender.com']
+ALLOWED_HOSTS = ['trivia-85mh.onrender.com', 'localhost', '127.0.0.1']
 
 
 

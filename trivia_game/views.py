@@ -127,7 +127,7 @@ from django.views.decorators.http import require_POST
 def load_data_view(request):
     try:
         # Carga los datos usando el comando 'loaddata'
-        call_command('loaddata', 'preguntas')  # Sin la ruta completa
+        call_command('loaddata', 'preguntas2')  # Sin la ruta completa
         return HttpResponse("Datos cargados exitosamente.")
     except Exception as e:
         return HttpResponse(f"Error al cargar datos: {e}")

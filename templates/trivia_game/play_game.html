@@ -55,11 +55,11 @@
 </head>
 <body>
     <div class="container">
-        <h1>Ingresa tu nombre para jugar</h1>
+        <h1>Ingresa tu apodo para jugar</h1>
         <form method="post">
             {% csrf_token %}
             {{ player_form.as_p }}
-            <button type="submit">Comenzar</button>
+            <button type="submit">¿Comenzar?</button>
         </form>
     </div>
 </body>

@@ -23,9 +23,14 @@ class PlayerForm(forms.ModelForm):
         return name
 
 class AnswerForm(forms.Form):
-    selected_answer = forms.ChoiceField(choices=[], widget=forms.RadioSelect)
+    selected_answer = forms.ChoiceField(
+        choices=[], 
+        widget=forms.RadioSelect,
+        label='Selecciona una respuesta'  # Cambia aquí el texto a español
+    )
 
     def __init__(self, *args, **kwargs):
         question = kwargs.pop('question')
         super().__init__(*args, **kwargs)
         self.fields['selected_answer'].choices = [(answer, answer) for answer in question.get_answers()]
+

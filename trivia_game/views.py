@@ -3,6 +3,8 @@ from django.shortcuts import render, redirect
 from .forms import QuestionForm, AnswerForm, PlayerForm
 from .models import Question, Player
 import time
+import os
+from django.http import JsonResponse
 
 def add_question(request):
     if request.method == 'POST':
@@ -124,12 +126,12 @@ from django.views.decorators.http import require_POST
 @require_POST
 def load_data_view(request):
     try:
-        # Ruta del archivo JSON (ajusta según tu estructura de carpetas)
+        # Ruta del archivo JSON
         json_file_path = os.path.join(os.path.dirname(__file__), 'data', 'preguntas.json')
 
         # Carga los datos usando el comando 'loaddata'
         call_command('loaddata', json_file_path)
 
-        return HttpResponse("Datos cargados exitosamente.")
+        return JsonResponse({"status": "success", "message": "Datos cargados exitosamente."})
     except Exception as e:
-        return HttpResponse(f"Error al cargar datos: {e}")
+        return JsonResponse({"status": "error", "message": str(e)})

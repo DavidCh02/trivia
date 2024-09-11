@@ -126,12 +126,8 @@ from django.views.decorators.http import require_POST
 @require_POST
 def load_data_view(request):
     try:
-        # Ruta del archivo JSON
-        json_file_path = os.path.join(os.path.dirname(__file__), 'data', 'preguntas.json')
-
         # Carga los datos usando el comando 'loaddata'
-        call_command('loaddata', json_file_path)
-
-        return JsonResponse({"status": "success", "message": "Datos cargados exitosamente."})
+        call_command('loaddata', 'preguntas')  # Sin la ruta completa
+        return HttpResponse("Datos cargados exitosamente.")
     except Exception as e:
-        return JsonResponse({"status": "error", "message": str(e)})
+        return HttpResponse(f"Error al cargar datos: {e}")

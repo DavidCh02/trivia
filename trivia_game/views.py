@@ -116,7 +116,12 @@ def leaderboard(request):
 
 def home(request):
     return render(request, 'trivia_game/home.html')
-    
+
+from django.http import JsonResponse
+from django.core.management import call_command
+from django.views.decorators.http import require_POST
+
+@require_POST
 def load_data_view(request):
     try:
         # Ruta del archivo JSON (ajusta según tu estructura de carpetas)

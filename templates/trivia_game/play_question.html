@@ -150,18 +150,17 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Preguntas Mixtas</h1>
+<div class="container">
+        <h1>Juego de Trivia</h1>
         <div class="question-box">
             <p class="question-text">{{ question.text }}</p>
             <form id="answer-form" method="post">
-            {% csrf_token %}
-            <div class="form-group">
-                <label for="{{ form.selected_answer.id_for_label }}">Elige una opción</label>
-                {{ form.selected_answer }}
-            </div>
-            <input type="hidden" name="time_expired" id="time-expired" value="false">
-            <button id="submit-answer" type="submit">Enviar respuesta</button>
+                {% csrf_token %}
+                <div id="form-fields">
+                    {{ form.as_p }}
+                </div>
+                <input type="hidden" name="time_expired" id="time-expired" value="false">
+                <button id="submit-answer" type="submit">Enviar respuesta</button>
             </form>
 
             <div class="timer">
@@ -174,12 +173,11 @@
         {% if result_message %}
         <p id="server-result-message" class="result-message {{ result_class }}">{{ result_message }}</p>
         {% endif %}
-        <div id="next-question" class="next-question" style="display: none;">
+        <div id="next-question" class="next-question" style="display: {% if show_next_button %}block{% else %}none{% endif %};">
             <form method="get">
                 <button type="submit">Siguiente Pregunta</button>
             </form>
         </div>
-
         <div class="finish-game" style="margin-top: 1rem;">
             <form action="{% url 'leaderboard' %}" method="get">
                 <button type="submit">Terminar Juego</button>

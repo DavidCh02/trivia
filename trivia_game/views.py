@@ -116,3 +116,15 @@ def leaderboard(request):
 
 def home(request):
     return render(request, 'trivia_game/home.html')
+    
+def load_data_view(request):
+    try:
+        # Ruta del archivo JSON (ajusta según tu estructura de carpetas)
+        json_file_path = os.path.join(os.path.dirname(__file__), 'data', 'preguntas.json')
+
+        # Carga los datos usando el comando 'loaddata'
+        call_command('loaddata', json_file_path)
+
+        return HttpResponse("Datos cargados exitosamente.")
+    except Exception as e:
+        return HttpResponse(f"Error al cargar datos: {e}")

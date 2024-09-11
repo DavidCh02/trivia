@@ -29,4 +29,4 @@ class AnswerForm(forms.Form):
     def __init__(self, *args, **kwargs):
         question = kwargs.pop('question')
         super().__init__(*args, **kwargs)
-        self.fields['Escoje una respuesta, recuerda que tienes tiempo'].choices = [(answer, answer) for answer in question.get_answers()]
+        self.fields['selected answer'].choices = [(answer, answer) for answer in question.get_answers()]

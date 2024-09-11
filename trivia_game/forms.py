@@ -22,10 +22,9 @@ class PlayerForm(forms.ModelForm):
             raise forms.ValidationError('El nombre del jugador ya está en uso. Por favor, elige otro nombre brother.')
         return name
 
-
 class AnswerForm(forms.Form):
-    selected_answer = forms.ChoiceField(choices=[], widget=forms.RadioSelect, label="Elige una opción")
-    
+    selected_answer = forms.ChoiceField(choices=[], widget=forms.RadioSelect)
+
     def __init__(self, *args, **kwargs):
         question = kwargs.pop('question')
         super().__init__(*args, **kwargs)

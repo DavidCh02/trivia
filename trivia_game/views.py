@@ -55,6 +55,7 @@ def play_question(request):
     show_next_button = False
     time_expired = False
     time_limit = 20  # Tiempo límite en segundos
+    correct_answer = question.correct_answer  # Guardamos la respuesta correcta
 
     start_time = request.session.get(f'question_start_time_{player_id}')
     if not start_time:
@@ -70,7 +71,7 @@ def play_question(request):
         # Manejar tiempo agotado
         if request.POST.get('time_expired') == 'true' or time_left <= 0:
             player.score -= 1
-            result_message = '¡Se acabó el tiempo! Has perdido 1 punto.'
+            result_message = f'¡Se acabó el tiempo! Has perdido 1 punto. La respuesta correcta era: {correct_answer}'
             result_class = 'incorrect'
             time_expired = True
             show_next_button = True
@@ -78,11 +79,11 @@ def play_question(request):
             selected_answer = form.cleaned_data['selected_answer']
             if selected_answer == question.correct_answer:
                 player.score += 10
-                result_message = '¡Respuesta Correcta! Has ganado 10 puntos.'
+                result_message = f'¡Respuesta Correcta! Has ganado 10 puntos. La respuesta correcta es: {correct_answer}'
                 result_class = 'correct'
             else:
                 player.score -= 5
-                result_message = 'Respuesta Incorrecta. Has perdido 5 puntos.'
+                result_message = f'Respuesta Incorrecta. Has perdido 5 puntos. La respuesta correcta era: {correct_answer}'
                 result_class = 'incorrect'
 
             show_next_button = True
@@ -110,7 +111,8 @@ def play_question(request):
         'result_class': result_class,
         'show_next_button': show_next_button,
         'time_left': time_left,
-        'time_expired': time_expired
+        'time_expired': time_expired,
+        'correct_answer': correct_answer  # Pasamos la respuesta correcta al template
     })
 def leaderboard(request):
     players = Player.objects.order_by('-score')

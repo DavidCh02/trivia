@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function handleTimeExpired() {
         timeExpiredInput.value = 'true';
-        resultMessage.textContent = "¡Se acabó el tiempo! Has perdido 1 punto.";
+        resultMessage.textContent = "¡Se acabó el tiempo! Has perdido 1 punto. La respuesta correcta era: {{ correct_answer }}";
         resultMessage.classList.add('incorrect');
         resultMessage.style.display = "block";
         submitButton.style.display = "none";

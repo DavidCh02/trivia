@@ -54,7 +54,7 @@ def play_question(request):
     result_class = ''
     show_next_button = False
     time_expired = False
-    time_limit = 10  # Tiempo límite en segundos
+    time_limit = 20  # Tiempo límite en segundos
 
     start_time = request.session.get(f'question_start_time_{player_id}')
     if not start_time:

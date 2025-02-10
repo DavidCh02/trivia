@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'Trivia.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(default='postgresql://postgres_usuario_contrase_c3_user:6qdfBvvdcjkySHGnWjbcZBgnuosI5FQo@dpg-crggi7dsvqrc73f1ucd0-a.oregon-postgres.render.com/postgres_usuario_contrase_c3')
+    'default': dj_database_url.config(default='postgresql://trivia_s1ok_user:wS4Vy7s4xt3TDOLlJBOd8cGfO3JdjeKD@dpg-cul8rt2n91rc73e8njcg-a/trivia_s1ok')
 }
 
 

@@ -26,7 +26,7 @@ SECRET_KEY = 'a6e80d44260d9ae09adecedfb2f58dd6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['dpg-cul8m3hu0jms73fqi3c0-a', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['trivia-85mh.onrender.com', 'localhost', '127.0.0.1']
 
 
 
